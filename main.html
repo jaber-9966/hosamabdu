@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> حسام عبد الحافظ القحطاني - مستشار أمن سيبراني</title>
+    <link rel="icon" href="work-steps-1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: white;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+        
+        nav {
+            background: #2c3e50;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: #4ca1af;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        nav a:hover {
+            background: #3498db;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .main-content {
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        
+        .assignment {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .assignment h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4ca1af;
+            font-size: 1.8rem;
+        }
+        
+        /* التكليف الأول - الدائرة التي تتحول إلى مثلث */
+        .shape-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .shape {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .shape.triangle {
+            border-radius: 0;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            transform: rotate(360deg);
+        }
+        
+        .shape-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        /* التكليف الثاني - أيقونة الصفحة */
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .page-icon {
+            font-size: 5rem;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+        
+        .page-icon:hover {
+            color: #3498db;
+            transform: scale(1.2) rotate(10deg);
+        }
+        
+        .icon-link {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .icon-link:hover {
+            background: #3498db;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1.1rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav a {
+                width: 80%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>أهلاً وسهلاً بكم في موقع حسام عبد الحافظ القحطاني</h1>
+            <p>مستشار أمن سيبراني</p>
+        </header>
+        
+        <nav>
+            <a href="#assignment1"><i class="fas fa-shapes"></i> التكليف الأول</a>
+            <a href="خلاصة.html"><i class="fas fa-icons"></i> التكليف الثاني</a>
+        </nav>
+        
+        <main class="main-content">
+            <section id="assignment1" class="assignment">
+                <h2><i class="fas fa-shapes"></i> التكليف الأول: دائرة تتحول إلى مثلث</h2>
+                <div class="shape-container">
+                    <div class="shape" id="shape" onclick="toggleShape()">
+                        <span id="shape-text">انقر هنا</span>
+                    </div>
+                    <p class="shape-text">انقر على الدائرة لتحويلها إلى مثلث</p>
+                </div>
+            </section>
+            
+            <section id="assignment2" class="assignment">
+                <!-- <h2><i class="fas fa-icons"></i> التكليف الثاني: أيقونة الصفحة</h2> -->
+                <div class="icon-container">
+                    <i class="fas fa-user-shield page-icon"></i>
+                    <a href="logo.webp" class="icon-link">رابط الصفحة <i class="fas fa-external-link-alt"></i></a>
+                    <!-- <p>هذه أيقونة تمثل الأمن السيبراني، يمكنك إضافة الرابط المطلوب يدوياً</p> -->
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>حسام عبد الحافظ القحطاني</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleShape() {
+            const shape = document.getElementById('shape');
+            const shapeText = document.getElementById('shape-text');
+            
+            shape.classList.toggle('triangle');
+            
+            if (shape.classList.contains('triangle')) {
+                shapeText.textContent = "مثلث";
+            } else {
+                shapeText.textContent = "دائرة";
+            }
+        }
+    </script>
+</body>
+</html>
